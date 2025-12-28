@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
-import { authService } from '../../services';
+import { useAuth } from '../../contexts/AuthContext';
 import ConfirmModal from '../../components/common/ConfirmModal';
 import './Auth.css';
 
 const Register = () => {
+  const { register } = useAuth();
+  const navigate = useNavigate();
+  
   const [userData, setUserData] = useState({
     username: '',
     email: '',
@@ -87,11 +91,8 @@ const Register = () => {
 
     try {
       const { confirmPassword, ...registerData } = userData;
-      const response = await authService.register(registerData);
-      
-      if (response.data.success) {
-        setShowSuccessModal(true);
-      }
+      await register(registerData);
+      setShowSuccessModal(true);
     } catch (error) {
       const errorMsg = error.response?.data?.message || 'Đăng ký thất bại';
       setError(errorMsg);
@@ -364,8 +365,8 @@ const Register = () => {
       {/* ✅ Success Modal */}
       <ConfirmModal
         isOpen={showSuccessModal}
-        onClose={() => window.location.href = '/login'}
-        onConfirm={() => window.location.href = '/login'}
+        onClose={() => navigate('/login')}
+        onConfirm={() => navigate('/login')}
         title="Đăng ký thành công!"
         message="Tài khoản của bạn đã được tạo thành công. Vui lòng đăng nhập để tiếp tục."
         confirmText="Đăng nhập"
