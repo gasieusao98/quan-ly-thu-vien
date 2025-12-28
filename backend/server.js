@@ -6,8 +6,18 @@ require('dotenv').config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// ========== CORS CONFIGURATION FOR PRODUCTION ==========
+const corsOptions = {
+  origin: [
+    'http://localhost:3000',
+    'https://library-frontend-sv.onrender.com' // Production frontend URL
+  ],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+// =======================================================
+
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
@@ -47,7 +57,7 @@ app.get('/', (req, res) => {
             reservations: '/api/reservations',
             librarians: '/api/librarians',
             notifications: '/api/notifications',
-            excel: '/api/excel', // 🆕 THÊM
+            excel: '/api/excel',
             uploads: '/uploads'
         }
     });
@@ -62,7 +72,7 @@ mongoose.connect(process.env.MONGODB_URI)
     console.error('❌ Lỗi kết nối MongoDB:', err.message);
   });
 
-// Error handling middleware - IN CHI TIẾT LỖI
+// Error handling middleware
 app.use((err, req, res, next) => {
     console.error('\n❌ ===== SERVER ERROR =====');
     console.error('Error Name:', err.name);
@@ -94,7 +104,7 @@ app.listen(PORT, () => {
   console.log(`🔗 API URL: http://localhost:${PORT}`);
   console.log(`📁 Uploads: http://localhost:${PORT}/uploads`);
   console.log(`📧 Notifications: http://localhost:${PORT}/api/notifications`);
-  console.log(`📊 Excel: http://localhost:${PORT}/api/excel`); // 🆕 THÊM
+  console.log(`📊 Excel: http://localhost:${PORT}/api/excel`);
 });
 
 // Xử lý lỗi không được bắt

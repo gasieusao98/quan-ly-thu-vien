@@ -1,0 +1,55 @@
+# render.yaml - Blueprint for Library Management System
+services:
+  # Backend Service
+  - type: web
+    name: library-backend
+    env: node
+    region: singapore
+    plan: free
+    rootDirectory: backend  # ← QUAN TRỌNG: Chỉ định thư mục backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false  # Will set manually in Render dashboard
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://library-frontend.onrender.com
+
+  # Frontend Service (Static Site)
+  - type: web
+    name: library-frontend
+    env: static
+    region: singapore
+    plan: free
+    rootDirectory: frontend  # ← QUAN TRỌNG: Chỉ định thư mục frontend
+    buildCommand: |
+      npm install
+      npm run build
+    staticPublishPath: ./build  # ← ĐƯỜNG DẪN TƯƠNG ĐỐI từ rootDirectory
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://library-backend.onrender.com
+      - key: REACT_APP_ENVIRONMENT
+        value: production

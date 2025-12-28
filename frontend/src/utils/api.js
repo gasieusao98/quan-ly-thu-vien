@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-// Localhost cho browser, Docker sẽ proxy qua nginx
-const API_BASE_URL = 'http://localhost:5000/api';
+// ========== CONFIG FOR PRODUCTION ==========
+// Sử dụng biến môi trường cho production, fallback về localhost cho development
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// ===========================================
 
 const api = axios.create({
   baseURL: API_BASE_URL,
