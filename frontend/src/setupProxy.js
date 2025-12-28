@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'http://localhost:5000',
+      target: 'http://localhost:10000',  // ← Sửa từ 5000 thành 10000
       changeOrigin: true,
       pathRewrite: {
         '^/api': '/api',
@@ -26,7 +26,7 @@ module.exports = function(app) {
   app.use(
     '/uploads',
     createProxyMiddleware({
-      target: 'http://localhost:5000',
+      target: 'http://localhost:10000',  // ← Sửa từ 5000 thành 10000
       changeOrigin: true,
     })
   );
