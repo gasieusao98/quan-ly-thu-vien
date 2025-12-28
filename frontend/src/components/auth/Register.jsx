@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { authService } from '../../services';
 import ConfirmModal from '../../components/common/ConfirmModal';
@@ -356,7 +357,7 @@ const Register = () => {
 
         {/* Footer */}
         <div className="auth-footer">
-          <p>Đã có tài khoản? <a href="/login" className="auth-link">Đăng nhập ngay</a></p>
+          <p>Đã có tài khoản? <Link to="/login" className="auth-link">Đăng nhập ngay</Link></p>
         </div>
       </div>
 

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import './Auth.css';
@@ -161,7 +162,7 @@ const Login = () => {
 
         {/* Footer */}
         <div className="login-footer">
-          <p>Chưa có tài khoản? <a href="/register" className="auth-link">Đăng ký ngay</a></p>
+          <p>Chưa có tài khoản? <Link to="/register" className="auth-link">Đăng ký ngay</Link></p>
           <p className="demo-info">Demo: admin / 123456</p>
         </div>
       </div>
