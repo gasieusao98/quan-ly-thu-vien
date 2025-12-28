@@ -1,0 +1,162 @@
+@import './variables.css';
+@import './utilities/breakpoints.css';
+
+/* Globals */
+@import './globals/reset.css';
+@import './globals/typography.css';
+@import './globals/scrollbar.css';
+@import './globals/selection.css';
+@import './globals/focus.css';
+
+/* Utilities - RESPONSIVE FIRST */
+@import './utilities/responsive.css';
+@import './utilities/animations.css';
+@import './utilities/utilities.css';
+
+/* Components */
+@import './components/layout/sidebar.css';
+@import './components/layout/header.css';
+@import './components/layout/auth-layout.css';
+
+@import './components/ui/buttons.css';
+@import './components/ui/cards.css';
+@import './components/ui/forms.css';
+@import './components/ui/tables.css';
+
+@import './components/ui/badges.css';
+
+/* Auth */
+@import './components/auth/auth.css';
+
+/* Themes */
+@import './themes/dark.css';
+
+html[data-theme="dark"] .table {
+  background-color: var(--bg-card, #1e293b) !important;
+  color: var(--text-primary, #f1f5f9) !important;
+  border-color: var(--border-color, #334155) !important;
+}
+
+html[data-theme="dark"] .table th {
+  background-color: var(--bg-secondary, #334155) !important;
+  color: var(--text-primary, #f1f5f9) !important;
+  border-bottom-color: var(--border-color, #475569) !important;
+}
+
+html[data-theme="dark"] .table td {
+  background-color: var(--bg-card, #1e293b) !important;
+  color: var(--text-secondary, #cbd5e1) !important;
+  border-bottom-color: var(--border-color, #475569) !important;
+}
+
+html[data-theme="dark"] .table-hover tbody tr:hover {
+  background-color: var(--hover-bg-color, rgba(255, 255, 255, 0.05)) !important;
+}
+
+/* Specific fix for reservations table */
+html[data-theme="dark"] .reservations-table {
+  background-color: var(--bg-card, #1e293b) !important;
+}
+
+html[data-theme="dark"] .reservations-table th {
+  background-color: var(--bg-secondary, #334155) !important;
+  color: var(--text-primary, #f1f5f9) !important;
+}
+
+html[data-theme="dark"] .reservations-table td {
+  background-color: var(--bg-card, #1e293b) !important;
+  color: var(--text-secondary, #cbd5e1) !important;
+}
+
+html[data-theme="dark"] .reservations-table tbody tr:hover {
+  background-color: var(--hover-bg-color, rgba(255, 255, 255, 0.05)) !important;
+}
+
+/* Fix for table container */
+html[data-theme="dark"] .table-container {
+  background-color: var(--bg-card, #1e293b) !important;
+}
+
+/* Fix for Bootstrap card containing table */
+html[data-theme="dark"] .card.reservations-table-card {
+  background-color: var(--bg-card, #1e293b) !important;
+  border-color: var(--border-color, #334155) !important;
+}
+
+html[data-theme="dark"] .card.reservations-table-card .card-header {
+  background-color: var(--bg-secondary, #334155) !important;
+  border-bottom-color: var(--border-color, #475569) !important;
+  color: var(--text-primary, #f1f5f9) !important;
+}
+
+/* Ensure text colors in dark mode */
+html[data-theme="dark"] .book-title,
+html[data-theme="dark"] .member-name {
+  color: var(--text-primary, #f1f5f9) !important;
+}
+
+html[data-theme="dark"] .book-author,
+html[data-theme="dark"] .member-code {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+/* Status badges in dark mode */
+html[data-theme="dark"] .status-badge {
+  color: white !important;
+  border: none !important;
+}
+
+html[data-theme="dark"] .status-badge.available {
+  background: #2563eb !important; /* Blue */
+}
+
+html[data-theme="dark"] .status-badge.returned {
+  background: #059669 !important; /* Green */
+}
+
+html[data-theme="dark"] .status-badge.unavailable {
+  background: #dc2626 !important; /* Red */
+}
+
+html[data-theme="dark"] .status-badge.completed {
+  background: #7c3aed !important; /* Purple */
+}
+
+html[data-theme="dark"] .status-badge.expired {
+  background: #6b7280 !important; /* Gray */
+}
+
+/* Action buttons in dark mode */
+html[data-theme="dark"] .btn-action {
+  color: white !important;
+  border: none !important;
+}
+
+html[data-theme="dark"] .btn-detail {
+  background: #3b82f6 !important; /* Blue */
+}
+
+html[data-theme="dark"] .btn-cancel,
+html[data-theme="dark"] .btn-reject {
+  background: #ef4444 !important; /* Red */
+}
+
+html[data-theme="dark"] .btn-approve {
+  background: #10b981 !important; /* Green */
+}
+
+html[data-theme="dark"] .btn-confirm {
+  background: #8b5cf6 !important; /* Purple */
+}
+
+/* Force dark mode for table rows */
+html[data-theme="dark"] .reservations-tr,
+html[data-theme="dark"] .reservations-tr td {
+  background-color: var(--bg-card, #1e293b) !important;
+}
+
+/* Hover effect for table rows */
+html[data-theme="dark"] .reservations-tr:hover,
+html[data-theme="dark"] .reservations-tr:hover td {
+  background-color: var(--hover-bg-color, #2d3748) !important;
+}

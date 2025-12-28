@@ -1,0 +1,126 @@
+/* Statistics Chart Container */
+.statistics-chart-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.statistics-chart-container:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Chart Title */
+.statistics-chart-container .chart-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Chart Wrapper */
+.statistics-chart-container .chart-wrapper {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Chart Empty State */
+.statistics-chart-container .chart-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 2px dashed #cbd5e1;
+}
+
+.statistics-chart-container .chart-empty p {
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .statistics-chart-container {
+    padding: 16px;
+  }
+
+  .statistics-chart-container .chart-title {
+    font-size: 16px;
+  }
+
+  .statistics-chart-container .chart-wrapper {
+    padding: 12px;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+
+[data-theme="dark"] .statistics-chart-container {
+  background: var(--bg-secondary, #1e293b) !important;
+  border: 1px solid var(--border-color, #374151) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="dark"] .statistics-chart-container:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .statistics-chart-container .chart-title {
+  color: var(--text-primary, #f1f5f9) !important;
+  border-bottom: 2px solid var(--border-color, #374151) !important;
+}
+
+[data-theme="dark"] .statistics-chart-container .chart-wrapper {
+  background: var(--bg-card, #1e293b) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="dark"] .statistics-chart-container .chart-empty {
+  background: var(--bg-secondary, #1e293b) !important;
+  border: 2px dashed var(--border-color, #374151) !important;
+}
+
+[data-theme="dark"] .statistics-chart-container .chart-empty p {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+/* Dark mode cho các phần tử của Recharts */
+[data-theme="dark"] .recharts-cartesian-grid line {
+  stroke: var(--border-color, #374151) !important;
+}
+
+[data-theme="dark"] .recharts-text {
+  fill: var(--text-secondary, #cbd5e1) !important;
+}
+
+[data-theme="dark"] .recharts-tooltip-wrapper {
+  background-color: var(--bg-card, #1e293b) !important;
+  border: 1px solid var(--border-color, #374151) !important;
+  border-radius: 8px !important;
+}
+
+[data-theme="dark"] .recharts-default-tooltip {
+  background-color: var(--bg-card, #1e293b) !important;
+  border: 1px solid var(--border-color, #374151) !important;
+  color: var(--text-primary, #f1f5f9) !important;
+}
+
+[data-theme="dark"] .recharts-legend-item-text {
+  color: var(--text-primary, #f1f5f9) !important;
+}

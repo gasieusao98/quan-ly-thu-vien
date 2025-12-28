@@ -1,0 +1,602 @@
+/* styles/themes/dark.css */
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Dark Mode Layout */
+[data-theme="dark"] .app-container {
+  background: var(--bg-primary);
+}
+
+[data-theme="dark"] .main-content {
+  background: var(--bg-primary);
+}
+
+[data-theme="dark"] .page-content {
+  background: var(--bg-primary);
+}
+
+[data-theme="dark"] .page-container {
+  background: var(--bg-primary);
+}
+
+/* Dark Mode Header */
+[data-theme="dark"] .header {
+  background: var(--bg-card);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .header h1 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .header p {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .header-date {
+  color: var(--text-muted);
+}
+
+/* === THÊM PHẦN NÀY: Dark Mode ReaderHeader === */
+[data-theme="dark"] .reader-header {
+  background: var(--bg-card);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .user-info {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .greeting {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .logo {
+  color: var(--text-primary) !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  background: none !important;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: var(--primary-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .logout-btn {
+  background: var(--bg-secondary);
+  color: var(--error-color);
+  border: 1px solid var(--error-color);
+}
+
+[data-theme="dark"] .logout-btn:hover {
+  background: var(--error-color);
+  color: white;
+}
+/* === KẾT THÚC PHẦN THÊM === */
+
+/* Dark Mode Sidebar */
+[data-theme="dark"] .sidebar {
+  background: var(--bg-card);
+  border-right-color: var(--border-color);
+}
+
+[data-theme="dark"] .sidebar-nav a {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .sidebar-nav a:hover,
+[data-theme="dark"] .sidebar-nav a.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Dark Mode Cards & Content */
+[data-theme="dark"] .card {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-header {
+  background: var(--bg-secondary);
+  border-bottom-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* === ĐÃ SỬA PHẦN NÀY === */
+/* Dark Mode Tables */
+[data-theme="dark"] .table-responsive {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table-compact {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .table-compact th {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .table-compact td {
+  border-bottom-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .table-compact tbody tr:hover {
+  background: var(--bg-tertiary);
+}
+
+/* CSS MỚI CHO RESERVATIONS TABLE */
+[data-theme="dark"] .reservations-table-card {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .reservations-table-header {
+  background: var(--bg-secondary);
+  border-bottom-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .reservations-table {
+  background: var(--bg-card);
+}
+
+[data-theme="dark"] .reservations-table th {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .reservations-table td {
+  border-bottom-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .reservations-table tbody tr:hover {
+  background: var(--bg-tertiary);
+}
+
+[data-theme="dark"] .book-title {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+[data-theme="dark"] .book-author {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+[data-theme="dark"] .member-name {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+[data-theme="dark"] .member-code {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* === KẾT THÚC PHẦN ĐÃ SỬA === */
+
+/* Dark Mode Forms */
+[data-theme="dark"] .auth-card {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .auth-title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .auth-input {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .auth-input:focus {
+  border-color: var(--primary-color);
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .form-modal-content {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-modal-header {
+  background: var(--bg-secondary);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-modal-input {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-modal-input:focus {
+  background: var(--bg-secondary);
+}
+
+/* Dark Mode Buttons */
+[data-theme="dark"] .btn-secondary {
+  background: var(--gray-600);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background: var(--gray-500);
+}
+
+/* Dark Mode Modal */
+[data-theme="dark"] .modal-content {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .modal-header {
+  background: var(--bg-secondary);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .close-button,
+[data-theme="dark"] .form-modal-close {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .close-button:hover,
+[data-theme="dark"] .form-modal-close:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* Dark Mode Status Badges */
+[data-theme="dark"] .status-badge.available {
+  background: #22543d;
+  color: #c6f6d5;
+}
+
+[data-theme="dark"] .status-badge.unavailable {
+  background: #742a2a;
+  color: #fed7d7;
+}
+
+[data-theme="dark"] .status-badge.returned {
+  background: #2a4365;
+  color: #bee3f8;
+}
+
+/* Dark Mode Theme Toggle */
+[data-theme="dark"] .theme-toggle-btn {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover {
+  transform: scale(1.1);
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Dark Mode Mobile Menu */
+[data-theme="dark"] .mobile-menu-btn {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .modal-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Dark Mode Scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--gray-500);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-400);
+}
+
+/* Dark Mode Selection */
+[data-theme="dark"] ::selection {
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+/* Reader Layout Dark Mode */
+[data-theme="dark"] .reader-layout {
+  background: var(--bg-primary);
+}
+
+[data-theme="dark"] .reader-main {
+  background: var(--bg-primary);
+}
+
+/* ===== OVERRIDE BOOTSTRAP CLASSES FOR DARK MODE ===== */
+
+[data-theme="dark"] .bg-light {
+  background-color: var(--bg-secondary) !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+[data-theme="dark"] .bg-body {
+  background-color: var(--bg-primary) !important;
+}
+
+[data-theme="dark"] .text-dark {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .text-black {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .text-body {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .border {
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .border-light {
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .border-top,
+[data-theme="dark"] .border-end,
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-start {
+  border-color: var(--border-color) !important;
+}
+
+/* Card overrides */
+[data-theme="dark"] .card {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .card-header {
+  background-color: var(--bg-secondary) !important;
+  border-bottom-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .card-body {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .card-footer {
+  background-color: var(--bg-secondary) !important;
+  border-top-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Button overrides */
+[data-theme="dark"] .btn-light {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .btn-light:hover {
+  background-color: var(--bg-tertiary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .btn-outline-light {
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .btn-outline-light:hover {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Alert overrides */
+[data-theme="dark"] .alert-light {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* List group overrides */
+[data-theme="dark"] .list-group-item {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .list-group-item-action:hover {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Form control overrides */
+[data-theme="dark"] .form-control {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .form-control:focus {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.25) !important;
+}
+
+[data-theme="dark"] .form-select {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Table overrides */
+[data-theme="dark"] .table {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .table th {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .table td {
+  border-color: var(--border-color) !important;
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Shadow overrides */
+[data-theme="dark"] .shadow-sm {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+/* THÊM VÀO CUỐI FILE dark.css */
+
+/* Dark Mode cho alert-info trong ReservationModal */
+[data-theme="dark"] .alert-info {
+  background-color: var(--info-light) !important;
+  border-color: var(--info-dark) !important;
+  color: var(--info-dark) !important;
+}
+
+[data-theme="dark"] .alert-info strong {
+  color: var(--info-dark) !important;
+}
+
+[data-theme="dark"] .alert-info li {
+  color: var(--info-dark) !important;
+}
+
+[data-theme="dark"] .alert-info .fas {
+  color: var(--info-dark) !important;
+}
+
+/* THÊM VÀO CUỐI FILE dark.css */
+
+/* Ngăn dark mode ảnh hưởng đến trang đăng nhập */
+[data-theme="light"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+[data-theme="dark"] [data-theme="light"],
+[data-theme="dark"] [data-theme="light"] * {
+  color: inherit !important;
+  background-color: inherit !important;
+  border-color: inherit !important;
+}
+
+/* Đảm bảo trang đăng nhập luôn ở light mode */
+.auth-container[data-theme="light"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.auth-container[data-theme="light"] .login-card {
+  background: white !important;
+  color: #1f2937 !important;
+}
+
+.auth-container[data-theme="light"] .form-input {
+  color: #1f2937 !important;
+  background-color: #f9fafb !important;
+}
+
+/* ===== FIX SIDEBAR TEXT COLOR IN DARK MODE ===== */
+
+/* Chữ "📖 Thư Viện" trong sidebar */
+[data-theme="dark"] .sidebar-logo-text {
+  color: #f8fafc !important; /* Màu trắng sáng */
+}
+
+/* Chữ "Xin chào, Admin" trong sidebar */
+[data-theme="dark"] .sidebar-user-info {
+  color: #e2e8f0 !important; /* Màu xám sáng */
+}
+
+/* Chữ "Vai trò: Quản trị viên" trong sidebar */
+[data-theme="dark"] .sidebar-user-role {
+  color: #94a3b8 !important; /* Màu xám nhạt */
+}
+
+/* Tất cả text trong sidebar */
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .sidebar *:not(.sidebar-nav-item-active):not(.sidebar-nav-item-active *) {
+  color: #f1f5f9 !important;
+}
+
+/* Menu items trong sidebar */
+[data-theme="dark"] .sidebar-nav-item {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .sidebar-nav-item:hover {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .sidebar-nav-item-active {
+  color: #ffffff !important;
+}
+
+/* Logout button text */
+[data-theme="dark"] .sidebar-logout-btn {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .sidebar-logout-btn:hover {
+  color: #ffffff !important;
+}

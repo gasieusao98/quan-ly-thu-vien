@@ -1,0 +1,35 @@
+.card {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--gray-200);
+  min-width: 0;
+}
+
+/* Đảm bảo Bootstrap card-body có màu chữ đúng */
+.card-body {
+  color: var(--gray-900) !important;
+}
+
+.card-title {
+  color: var(--gray-800) !important;
+  font-weight: 600;
+}
+
+/* Fix cho text trong Bootstrap cards */
+.bg-primary .card-body,
+.bg-success .card-body, 
+.bg-warning .card-body,
+.bg-info .card-body {
+  color: white !important;
+}
+
+.bg-primary .h3,
+.bg-success .h3,
+.bg-warning .h3, 
+.bg-info .h3 {
+  color: white !important;
+  font-weight: bold;
+}

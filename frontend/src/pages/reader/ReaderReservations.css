@@ -1,0 +1,587 @@
+/* ReaderReservations.css */
+.reader-reservations {
+  min-height: 100vh;
+  background: var(--background-color, #f8f9fa);
+  color: var(--text-primary, #212529);
+}
+
+/* Header */
+.reader-reservations-header {
+  background: var(--card-bg, #ffffff);
+  border-bottom-color: var(--border-color, #dee2e6);
+}
+
+.reservations-title {
+  color: var(--text-primary, #212529);
+}
+
+.reservations-subtitle {
+  color: var(--text-secondary, #6c757d);
+}
+
+.reservations-count {
+  color: var(--text-secondary, #6c757d);
+}
+
+/* Search Section */
+.reader-reservations-search {
+  background: var(--background-color, #f8f9fa);
+  border-bottom-color: var(--border-color, #dee2e6);
+}
+
+/* Input group styling */
+.reader-reservations-search .input-group {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.reader-reservations-search .input-group:focus-within {
+  box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.reader-reservations-search .input-group-text {
+  background: var(--input-group-bg, #f8f9fa);
+  border-color: var(--border-color, #ced4da);
+  color: var(--text-muted, #6c757d);
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.reader-reservations-search .input-group:focus-within .input-group-text {
+  background: var(--input-group-focus-bg, #e9ecef);
+  border-color: var(--primary-color, #0d6efd);
+  color: var(--primary-color, #0d6efd);
+}
+
+.reservations-search-input {
+  background: var(--input-bg, #ffffff);
+  border-color: var(--border-color, #ced4da);
+  color: var(--text-primary, #212529);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.reservations-search-input:focus {
+  background: var(--input-bg, #ffffff);
+  border-color: var(--primary-color, #0d6efd);
+  color: var(--text-primary, #212529);
+  box-shadow: none;
+  outline: none;
+}
+
+/* QUAN TRỌNG: Sửa placeholder color cho tất cả trình duyệt */
+.reservations-search-input::placeholder {
+  color: var(--text-muted, #6c757d);
+  opacity: 1;
+  font-size: 0.95rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.reservations-search-input::-webkit-input-placeholder {
+  color: var(--text-muted, #6c757d);
+  opacity: 1;
+}
+
+.reservations-search-input::-moz-placeholder {
+  color: var(--text-muted, #6c757d);
+  opacity: 1;
+}
+
+.reservations-search-input:-ms-input-placeholder {
+  color: var(--text-muted, #6c757d);
+  opacity: 1;
+}
+
+.reservations-search-input:-moz-placeholder {
+  color: var(--text-muted, #6c757d);
+  opacity: 1;
+}
+
+.reservations-clear-btn {
+  background: var(--input-bg, #ffffff);
+  border-color: var(--border-color, #ced4da);
+  color: var(--text-muted, #6c757d);
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.reservations-clear-btn:hover {
+  background: var(--bg-secondary, #f8f9fa);
+  color: var(--text-primary, #212529);
+  border-color: var(--border-color, #495057);
+}
+
+/* Main content */
+.reader-reservations-main {
+  background: var(--background-color, #f8f9fa);
+}
+
+/* Loading state */
+.reservations-loading-card {
+  background: var(--card-bg, #ffffff);
+  border-color: var(--border-color, #dee2e6);
+}
+
+.loading-text {
+  color: var(--text-secondary, #6c757d);
+}
+
+/* Error state */
+.alert-danger {
+  background: var(--danger-bg, #f8d7da);
+  border-color: var(--danger-border, #f5c2c7);
+  color: var(--danger-text, #842029);
+}
+
+/* Empty state */
+.reservations-empty-card {
+  background: var(--card-bg, #ffffff);
+  border-color: var(--border-color, #dee2e6);
+}
+
+.empty-text {
+  color: var(--text-secondary, #6c757d);
+}
+
+.empty-hint {
+  color: var(--text-muted, #6c757d);
+  font-size: 0.875rem;
+}
+
+/* Table Card */
+.reservations-table-card {
+  background: var(--card-bg, #ffffff);
+  border-color: var(--border-color, #dee2e6);
+}
+
+.reservations-table-header {
+  background: var(--bg-secondary, #f8f9fa);
+  border-bottom-color: var(--border-color, #dee2e6);
+}
+
+.results-count {
+  color: var(--text-secondary, #6c757d);
+}
+
+.show-all-btn {
+  color: var(--text-secondary, #6c757d);
+  border-color: var(--border-color, #6c757d);
+}
+
+.show-all-btn:hover {
+  background: var(--bg-secondary, #e9ecef);
+  color: var(--text-primary, #212529);
+  border-color: var(--border-color, #495057);
+}
+
+/* Table */
+.reservations-table {
+  background: var(--card-bg, #ffffff);
+  color: var(--text-primary, #212529);
+}
+
+.reservations-th {
+  background: var(--bg-secondary, #f8f9fa);
+  border-bottom-color: var(--border-color, #dee2e6);
+  color: var(--text-primary, #212529);
+  font-weight: 600;
+  padding: 1rem 0.75rem;
+}
+
+.reservations-tr {
+  border-bottom-color: var(--border-color, #dee2e6);
+}
+
+.reservations-tr:hover {
+  background: var(--table-hover-bg, rgba(0, 0, 0, 0.03));
+}
+
+.reservations-td {
+  border-bottom-color: var(--border-color, #dee2e6);
+  color: var(--text-secondary, #495057);
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+}
+
+/* Book info */
+.book-title {
+  color: var(--text-primary, #212529);
+  font-weight: 500;
+}
+
+.book-author {
+  color: var(--text-muted, #6c757d);
+  font-size: 0.875rem;
+}
+
+.member-name {
+  color: var(--text-primary, #212529);
+}
+
+.member-code {
+  color: var(--text-muted, #6c757d);
+  font-size: 0.875rem;
+}
+
+/* Status badges */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.available {
+  background: var(--status-available-bg, #dbeafe);
+  color: var(--status-available-text, #1e40af);
+  border: 1px solid var(--status-available-border, #93c5fd);
+}
+
+.status-badge.returned {
+  background: var(--status-approved-bg, #dcfce7);
+  color: var(--status-approved-text, #166534);
+  border: 1px solid var(--status-approved-border, #86efac);
+}
+
+.status-badge.unavailable {
+  background: var(--status-cancelled-bg, #fee2e2);
+  color: var(--status-cancelled-text, #991b1b);
+  border: 1px solid var(--status-cancelled-border, #fca5a5);
+}
+
+.status-badge.completed {
+  background: var(--status-completed-bg, #e9d5ff);
+  color: var(--status-completed-text, #7e22ce);
+  border: 1px solid var(--status-completed-border, #d8b4fe);
+}
+
+.status-badge.expired {
+  background: var(--status-expired-bg, #e5e7eb);
+  color: var(--status-expired-text, #4b5563);
+  border: 1px solid var(--status-expired-border, #d1d5db);
+}
+
+/* Notes */
+.btn-notes {
+  background: transparent;
+  border: none;
+  color: var(--text-muted, #6c757d);
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+}
+
+.btn-notes:hover {
+  color: var(--primary-color, #0d6efd);
+  transform: scale(1.1);
+}
+
+.notes-empty {
+  color: var(--text-muted, #6c757d);
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-action {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-detail {
+  background: var(--btn-detail-bg, #e7f3ff);
+  color: var(--btn-detail-text, #0d6efd);
+  border-color: var(--btn-detail-border, #b6d4fe);
+}
+
+.btn-detail:hover {
+  background: var(--btn-detail-hover, #cfe2ff);
+  color: var(--btn-detail-hover-text, #0a58ca);
+}
+
+.btn-cancel,
+.btn-reject {
+  background: var(--btn-cancel-bg, #f8d7da);
+  color: var(--btn-cancel-text, #dc3545);
+  border-color: var(--btn-cancel-border, #f5c2c7);
+}
+
+.btn-cancel:hover,
+.btn-reject:hover {
+  background: var(--btn-cancel-hover, #f1aeb5);
+  color: var(--btn-cancel-hover-text, #b02a37);
+}
+
+.btn-approve {
+  background: var(--btn-approve-bg, #d1e7dd);
+  color: var(--btn-approve-text, #198754);
+  border-color: var(--btn-approve-border, #badbcc);
+}
+
+.btn-approve:hover {
+  background: var(--btn-approve-hover, #a3cfbb);
+  color: var(--btn-approve-hover-text, #146c43);
+}
+
+.btn-confirm {
+  background: var(--btn-confirm-bg, #cff4fc);
+  color: var(--btn-confirm-text, #0dcaf0);
+  border-color: var(--btn-confirm-border, #9eeaf9);
+}
+
+.btn-confirm:hover {
+  background: var(--btn-confirm-hover, #a6e9f4);
+  color: var(--btn-confirm-hover-text, #0aa2c0);
+}
+
+/* Notes Modal */
+.notes-modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.notes-modal-header {
+  background: linear-gradient(135deg, var(--primary-color, #667eea) 0%, var(--primary-dark, #764ba2) 100%);
+  color: white;
+}
+
+.notes-modal-close {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.notes-modal-close:hover {
+  opacity: 1;
+}
+
+.notes-modal-body {
+  background: var(--card-bg, #ffffff);
+}
+
+.notes-content {
+  background: var(--bg-secondary, #f8f9fa);
+  border: 1px solid var(--border-color, #dee2e6);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  color: var(--text-primary, #212529);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Dark mode overrides - QUAN TRỌNG: Đảm bảo placeholder có màu sáng trong dark mode */
+[data-theme="dark"] .reader-reservations {
+  background: var(--bg-primary, #0f172a);
+}
+
+[data-theme="dark"] .reader-reservations-header {
+  background: var(--bg-card, #1e293b);
+  border-bottom-color: var(--border-color, #334155);
+}
+
+[data-theme="dark"] .reservations-title {
+  color: var(--text-primary, #f1f5f9);
+}
+
+[data-theme="dark"] .reservations-subtitle {
+  color: var(--text-secondary, #cbd5e1);
+}
+
+[data-theme="dark"] .reservations-count {
+  color: var(--text-secondary, #cbd5e1);
+}
+
+[data-theme="dark"] .reader-reservations-search {
+  background: var(--bg-primary, #0f172a);
+  border-bottom-color: var(--border-color, #334155);
+}
+
+[data-theme="dark"] .reader-reservations-search .input-group-text {
+  background: var(--input-group-bg, #334155);
+  border-color: var(--border-color, #475569);
+  color: var(--text-muted, #94a3b8);
+}
+
+[data-theme="dark"] .reader-reservations-search .input-group:focus-within .input-group-text {
+  background: var(--input-group-focus-bg, #475569);
+  border-color: var(--primary-color, #3b82f6);
+  color: var(--text-primary, #f1f5f9);
+}
+
+[data-theme="dark"] .reservations-search-input {
+  background: var(--input-bg, #334155);
+  border-color: var(--border-color, #475569);
+  color: var(--text-primary, #f1f5f9);
+}
+
+[data-theme="dark"] .reservations-search-input:focus {
+  background: var(--input-bg, #334155);
+  border-color: var(--primary-color, #3b82f6);
+  color: var(--text-primary, #f1f5f9);
+}
+
+/* QUAN TRỌNG NHẤT: Sửa placeholder color trong dark mode */
+[data-theme="dark"] .reservations-search-input::placeholder {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+[data-theme="dark"] .reservations-search-input::-webkit-input-placeholder {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+[data-theme="dark"] .reservations-search-input::-moz-placeholder {
+  color: var(--text-muted, #94a3b8) !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .reservations-search-input:-ms-input-placeholder {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+[data-theme="dark"] .reservations-search-input:-moz-placeholder {
+  color: var(--text-muted, #94a3b8) !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .reservations-clear-btn {
+  background: var(--input-bg, #334155);
+  border-color: var(--border-color, #475569);
+  color: var(--text-muted, #94a3b8);
+}
+
+[data-theme="dark"] .reservations-clear-btn:hover {
+  background: var(--bg-tertiary, #475569);
+  color: var(--text-primary, #f1f5f9);
+  border-color: var(--border-color, #94a3b8);
+}
+
+[data-theme="dark"] .reader-reservations-main {
+  background: var(--bg-primary, #0f172a);
+}
+
+[data-theme="dark"] .reservations-loading-card,
+[data-theme="dark"] .reservations-empty-card,
+[data-theme="dark"] .reservations-table-card {
+  background: var(--bg-card, #1e293b);
+  border-color: var(--border-color, #334155);
+}
+
+[data-theme="dark"] .loading-text,
+[data-theme="dark"] .empty-text,
+[data-theme="dark"] .empty-hint {
+  color: var(--text-secondary, #cbd5e1);
+}
+
+[data-theme="dark"] .reservations-table-header {
+  background: var(--bg-secondary, #334155);
+  border-bottom-color: var(--border-color, #475569);
+}
+
+[data-theme="dark"] .results-count {
+  color: var(--text-secondary, #cbd5e1);
+}
+
+[data-theme="dark"] .show-all-btn {
+  color: var(--text-muted, #94a3b8);
+  border-color: var(--border-color, #64748b);
+}
+
+[data-theme="dark"] .show-all-btn:hover {
+  background: var(--bg-tertiary, #475569);
+  color: var(--text-primary, #f1f5f9);
+  border-color: var(--border-color, #94a3b8);
+}
+
+[data-theme="dark"] .reservations-table {
+  background: var(--bg-card, #1e293b);
+  color: var(--text-primary, #f1f5f9);
+}
+
+[data-theme="dark"] .reservations-th {
+  background: var(--bg-secondary, #334155);
+  border-bottom-color: var(--border-color, #475569);
+  color: var(--text-primary, #f1f5f9);
+}
+
+[data-theme="dark"] .reservations-tr:hover {
+  background: var(--table-hover-bg, rgba(255, 255, 255, 0.05));
+}
+
+[data-theme="dark"] .reservations-td {
+  border-bottom-color: var(--border-color, #475569);
+  color: var(--text-secondary, #cbd5e1);
+}
+
+[data-theme="dark"] .book-title,
+[data-theme="dark"] .member-name {
+  color: var(--text-primary, #f1f5f9);
+}
+
+[data-theme="dark"] .book-author,
+[data-theme="dark"] .member-code {
+  color: var(--text-muted, #94a3b8);
+}
+
+[data-theme="dark"] .notes-content {
+  background: var(--bg-secondary, #334155);
+  border-color: var(--border-color, #475569);
+  color: var(--text-primary, #f1f5f9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reader-reservations-header {
+    padding: 1rem 0;
+  }
+  
+  .reservations-title {
+    font-size: 1.5rem;
+  }
+  
+  .reader-reservations-search .input-group {
+    flex-direction: column;
+  }
+  
+  .reader-reservations-search .input-group-text {
+    width: 100%;
+    justify-content: center;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .reservations-search-input {
+    width: 100%;
+    border-radius: 0;
+  }
+  
+  .reservations-clear-btn {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .reservations-table {
+    font-size: 0.875rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .btn-action {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6875rem;
+    width: 100%;
+  }
+}

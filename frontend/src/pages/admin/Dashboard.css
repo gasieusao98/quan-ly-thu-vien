@@ -1,0 +1,271 @@
+/* Dashboard Modern Style */
+.dashboard-modern {
+  background: var(--bg-primary) !important; /* THAY: #ffffff */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dashboard-content {
+  background: var(--bg-card) !important; /* THAY: rgba(255, 255, 255, 0.95) */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 30px;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Stats Cards Hiện Đại */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: var(--bg-card) !important; /* THAY: white */
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color) !important; /* THAY: rgba(255, 255, 255, 0.2) */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: var(--text-primary) !important;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color) !important;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+}
+
+.stat-card.books-total { --accent-color: #4e73df; }
+.stat-card.books-available { --accent-color: #1cc88a; }
+.stat-card.books-borrowed { --accent-color: #f6c23e; }
+.stat-card.members-total { --accent-color: #36b9cc; }
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  background: var(--accent-color);
+  color: white;
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-primary) !important; /* THAY: #2d3748 */
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  color: var(--text-muted) !important; /* THAY: #718096 */
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Recent Activity */
+.recent-section {
+  background: var(--bg-card) !important; /* THAY: white */
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  border: 1px solid var(--border-color) !important; /* THAY: #e2e8f0 */
+  color: var(--text-primary) !important;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--bg-secondary) !important; /* THAY: #f7fafc */
+}
+
+.section-header h3 {
+  font-weight: 600;
+  color: var(--text-primary) !important; /* THAY: #2d3748 */
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.section-header .view-all {
+  color: var(--primary-color) !important; /* THAY: #4e73df */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(var(--primary-color-rgb), 0.1); /* Dùng variable nếu có */
+}
+
+.section-header .view-all:hover {
+  color: var(--primary-hover) !important; /* THAY: #2e59d9 */
+  text-decoration: none;
+  background: rgba(var(--primary-color-rgb), 0.15);
+  transform: translateY(-1px);
+}
+
+/* Book và Member Items */
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: var(--bg-secondary) !important; /* THAY: #f8fafc */
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  color: var(--text-primary) !important;
+}
+
+.item-card:hover {
+  background: var(--bg-card) !important; /* THAY: white */
+  border-color: var(--primary-color) !important;
+  transform: translateX(5px);
+}
+
+.item-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.book-avatar { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+.member-avatar { background: linear-gradient(135deg, #f093fb, #f5576c); color: white; }
+
+.item-info {
+  flex: 1;
+}
+
+.item-title {
+  font-weight: 600;
+  color: var(--text-primary) !important; /* THAY: #2d3748 */
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.item-subtitle {
+  color: var(--text-muted) !important; /* THAY: #718096 */
+  font-size: 0.9rem;
+}
+
+.item-meta {
+  color: var(--text-muted) !important; /* THAY: #a0aec0 */
+  font-size: 0.85rem;
+}
+
+.item-badge {
+  background: var(--bg-tertiary) !important; /* THAY: #e2e8f0 */
+  color: var(--text-secondary) !important; /* THAY: #4a5568 */
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-modern {
+    padding: 10px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header .view-all {
+    font-size: 0.95rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-card, .recent-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* View All Button Style */
+.view-all-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color) !important; /* THAY: #4e73df */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  background: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.view-all-btn:hover {
+  color: var(--primary-hover) !important; /* THAY: #2e59d9 */
+  text-decoration: none;
+  background: rgba(var(--primary-color-rgb), 0.15);
+  transform: translateY(-1px);
+}
+
+/* Đảm bảo tất cả text đều dùng CSS variables */
+.dashboard-modern h1,
+.dashboard-modern h2,
+.dashboard-modern h3,
+.dashboard-modern h4,
+.dashboard-modern h5,
+.dashboard-modern h6,
+.dashboard-modern p,
+.dashboard-modern span,
+.dashboard-modern div {
+  color: var(--text-primary) !important;
+}
+
+.dashboard-modern .text-muted {
+  color: var(--text-muted) !important;
+}

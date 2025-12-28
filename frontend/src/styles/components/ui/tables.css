@@ -1,0 +1,221 @@
+/* styles/components/ui/tables.css */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  background: var(--bg-card); /* ĐÃ SỬA: var(--white) -> var(--bg-card) */
+  border: 1px solid var(--border-color); /* ĐÃ SỬA: var(--gray-200) -> var(--border-color) */
+}
+
+.table-compact {
+  width: 100%;
+  min-width: auto !important;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.table-compact th,
+.table-compact td {
+  padding: 0.3rem 0.4rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color); /* ĐÃ SỬA: var(--gray-200) -> var(--border-color) */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-compact th {
+  background: var(--bg-secondary); /* ĐÃ SỬA: var(--gray-50) -> var(--bg-secondary) */
+  font-weight: 600;
+  color: var(--text-primary); /* ĐÃ SỬA: var(--gray-700) -> var(--text-primary) */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+}
+
+/* Cột STT - nhỏ nhất */
+.table-compact th:nth-child(1),
+.table-compact td:nth-child(1) {
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+}
+
+/* Cột MÃ SÁCH - vừa */
+.table-compact th:nth-child(2),
+.table-compact td:nth-child(2) {
+  width: 100px;
+  min-width: 90px;
+  max-width: 120px;
+}
+
+/* Cột TÊN SÁCH - rộng hơn */
+.table-compact th:nth-child(3),
+.table-compact td:nth-child(3) {
+  width: 180px;
+  min-width: 150px;
+  max-width: 200px;
+}
+
+/* Các cột còn lại - vừa phải */
+.table-compact th:nth-child(4),
+.table-compact td:nth-child(4) {
+  width: 140px;
+  min-width: 120px;
+  max-width: 160px;
+}
+
+.table-compact th:nth-child(5),
+.table-compact td:nth-child(5) {
+  width: 120px;
+  min-width: 100px;
+  max-width: 140px;
+}
+
+.table-compact th:nth-child(6),
+.table-compact td:nth-child(6) {
+  width: 80px;
+  min-width: 70px;
+  max-width: 90px;
+}
+
+.table-compact tbody tr:hover {
+  background: var(--hover-bg-color); /* ĐÃ SỬA: var(--gray-50) -> var(--hover-bg-color) */
+}
+
+.table-compact tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.books-management-table {
+  font-size: 0.7rem;
+}
+
+.books-management-table th,
+.books-management-table td {
+  padding: 0.25rem 0.3rem;
+}
+
+/* THÊM CSS MỚI CHO TABLE CỦA RESERVATIONS */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--border-radius);
+}
+
+.reservations-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.reservations-table th,
+.reservations-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.reservations-table th {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.reservations-table tbody tr:hover {
+  background: var(--hover-bg-color);
+}
+
+.reservations-th {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.reservations-td {
+  color: var(--text-secondary) !important;
+}
+
+.reservations-tr:hover {
+  background: var(--hover-bg-color) !important;
+}
+
+/* Status badges */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status-badge.available {
+  background: var(--success-light);
+  color: var(--success-dark);
+}
+
+.status-badge.returned {
+  background: var(--info-light);
+  color: var(--info-dark);
+}
+
+.status-badge.unavailable {
+  background: var(--danger-light);
+  color: var(--danger-dark);
+}
+
+.status-badge.completed {
+  background: var(--purple-100);
+  color: var(--purple-800);
+}
+
+.status-badge.expired {
+  background: var(--gray-100);
+  color: var(--gray-800);
+}
+
+/* Action buttons */
+.btn-action {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-detail {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-cancel {
+  background: var(--danger-color);
+  color: white;
+}
+
+.btn-approve {
+  background: var(--success-color);
+  color: white;
+}
+
+.btn-reject {
+  background: var(--warning-color);
+  color: white;
+}
+
+.btn-confirm {
+  background: var(--info-color);
+  color: white;
+}
+
+.btn-action:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}

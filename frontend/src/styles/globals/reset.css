@@ -1,0 +1,133 @@
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--gray-50);
+  color: var(--gray-900);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Responsive images in containers */
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================================
+   MOBILE-FIRST RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+/* Mobile-first font sizing */
+@media (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    font-size: var(--fs-body-mobile);
+    line-height: 1.5;
+  }
+}
+
+/* Small devices landscape / Tablets */
+@media (min-width: 577px) and (max-width: 767px) {
+  body {
+    font-size: var(--fs-body-tablet);
+    line-height: 1.6;
+  }
+}
+
+/* Desktop and larger */
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    font-size: var(--fs-body-desktop);
+    line-height: 1.6;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Better handling of images on small screens */
+@media (max-width: 576px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  picture {
+    width: 100%;
+  }
+}
+
+/* Touch-friendly spacing on mobile */
+@media (max-width: 576px) {
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

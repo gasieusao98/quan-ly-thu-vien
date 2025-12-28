@@ -1,0 +1,96 @@
+/* layouts/reader/ReaderNavbar.css */
+.reader-nav {
+  background: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 73px;
+  z-index: 999;
+}
+
+.nav-content {
+  display: flex;
+  gap: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-link {
+  padding: 1.25rem 2rem;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 600;
+  position: relative;
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  background: var(--primary-light);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background: linear-gradient(90deg, var(--primary-light), transparent);
+}
+
+.nav-link.active::before {
+  opacity: 1;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive Navbar */
+@media (max-width: 1024px) {
+  .nav-content {
+    padding: 0 1rem;
+  }
+  
+  .nav-link {
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-content {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .nav-link {
+    padding: 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .nav-link span:not(.nav-icon) {
+    display: none;
+  }
+  
+  .nav-link::before {
+    display: none;
+  }
+}

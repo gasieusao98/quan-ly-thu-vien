@@ -1,0 +1,36 @@
+/* ========================================
+   RESPONSIVE BREAKPOINTS - MOBILE FIRST
+   ======================================== */
+
+:root {
+  /* Breakpoints */
+  --bp-xs: 320px;    /* Mobile small */
+  --bp-sm: 576px;    /* Mobile landscape / Small devices */
+  --bp-md: 768px;    /* Tablets */
+  --bp-lg: 1024px;   /* Desktop / Laptops */
+  --bp-xl: 1280px;   /* Large desktop */
+  --bp-xxl: 1536px;  /* Extra large screens */
+
+  /* Container padding responsive */
+  --container-padding-xs: 0.75rem;   /* 12px - Mobile */
+  --container-padding-sm: 1rem;      /* 16px - Tablet */
+  --container-padding-md: 1.5rem;    /* 24px - Desktop */
+  --container-padding-lg: 2rem;      /* 32px - Large */
+
+  /* Responsive font sizes */
+  --fs-h1-mobile: 1.5rem;
+  --fs-h1-tablet: 1.875rem;
+  --fs-h1-desktop: 2.25rem;
+
+  --fs-h2-mobile: 1.25rem;
+  --fs-h2-tablet: 1.5rem;
+  --fs-h2-desktop: 1.875rem;
+
+  --fs-h3-mobile: 1.125rem;
+  --fs-h3-tablet: 1.25rem;
+  --fs-h3-desktop: 1.5rem;
+
+  --fs-body-mobile: 0.875rem;
+  --fs-body-tablet: 0.9375rem;
+  --fs-body-desktop: 1rem;
+}
