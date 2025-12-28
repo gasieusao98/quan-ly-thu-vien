@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // ========== CONFIG FOR PRODUCTION ==========
 // Sử dụng biến môi trường cho production, fallback về localhost cho development
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://library-backend-sv.onrender.com/api';
 // ===========================================
 
 const api = axios.create({
