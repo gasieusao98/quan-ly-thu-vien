@@ -1,5 +1,4 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { authService } from '../services';
 
 const AuthContext = createContext();
@@ -10,12 +9,12 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const checkAuth = async () => {
       console.log('🔍 [AuthContext] Starting auth check on app load...');
       
+      // ✅ THAY: localStorage → sessionStorage (DEV)
       const storedToken = sessionStorage.getItem('token');
       const storedUser = sessionStorage.getItem('user');
       
@@ -24,6 +23,7 @@ export const AuthProvider = ({ children }) => {
         hasUser: !!storedUser
       });
 
+      // ✅ FIX: Nếu không có token hoặc user, set user = null ngay
       if (!storedToken || !storedUser) {
         console.log('❌ [AuthContext] No token/user found → Login page will be shown');
         setUser(null);
@@ -32,6 +32,7 @@ export const AuthProvider = ({ children }) => {
         return;
       }
 
+      // Nếu có token, verify với backend
       try {
         console.log('✅ [AuthContext] Token found, verifying with backend...');
         const response = await authService.getMe();
@@ -45,6 +46,7 @@ export const AuthProvider = ({ children }) => {
         setToken(storedToken);
         
       } catch (error) {
+        // ✅ FIX: Khi verify fail, xóa sessionStorage VÀ set user = null
         console.error('❌ [AuthContext] Token verification FAILED:', {
           status: error.response?.status,
           message: error.response?.data?.message || error.message
@@ -75,17 +77,13 @@ export const AuthProvider = ({ children }) => {
         role: user.role
       });
       
+      // ✅ THAY: localStorage → sessionStorage (DEV)
       sessionStorage.setItem('token', token);
       sessionStorage.setItem('user', JSON.stringify(user));
       
       setToken(token);
       setUser(user);
       setLoading(false);
-      
-      // ✅ Redirect to dashboard after successful login
-      setTimeout(() => {
-        navigate('/');
-      }, 300);
       
       return { success: true, user };
     } catch (error) {
@@ -96,32 +94,13 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const register = async (userData) => {
-    try {
-      console.log('📝 [AuthContext] Attempting register with username:', userData.username);
-      setLoading(true);
-      
-      const response = await authService.register(userData);
-      
-      console.log('✅ [AuthContext] Registration successful!', response.data.data);
-      
-      setLoading(false);
-      return { success: true, data: response.data.data };
-    } catch (error) {
-      const errorMessage = error.response?.data?.message || 'Đăng ký thất bại';
-      console.error('❌ [AuthContext] Registration failed:', errorMessage);
-      setLoading(false);
-      throw error;
-    }
-  };
-
   const logout = () => {
     console.log('🚪 [AuthContext] Logging out...');
+    // ✅ THAY: localStorage → sessionStorage (DEV)
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('user');
     setToken(null);
     setUser(null);
-    navigate('/login');
   };
 
   return (
@@ -129,8 +108,7 @@ export const AuthProvider = ({ children }) => {
       value={{ 
         user, 
         token, 
-        login,
-        register,
+        login, 
         logout, 
         loading,
         isAuthenticated: !!user 
