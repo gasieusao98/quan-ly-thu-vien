@@ -11,7 +11,9 @@ const BookList = ({ books, loading, onEdit, onDelete, onViewDetail, userRole }) 
   const getImageUrl = (imageUrl) => {
     if (!imageUrl) return null;
     if (imageUrl.startsWith('http')) return imageUrl; // Nếu đã full URL
-    return `http://localhost:5000${imageUrl}`; // Thêm base URL
+    const apiBaseUrl = process.env.REACT_APP_API_URL || 'http://localhost:10000/api';
+    const backendUrl = apiBaseUrl.replace('/api', '');
+    return `${backendUrl}${imageUrl}`;
   };
 
   return (
