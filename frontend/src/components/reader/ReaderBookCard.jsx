@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ReaderBookCard.css';
 
-const ReaderBookCard = ({ book, onBorrow, onReserve }) => { // THÊM onReserve
+const ReaderBookCard = ({ book, onBorrow, onReserve }) => {
   const [imageError, setImageError] = useState(false);
 
   const getCategoryClass = (category) => {
@@ -20,11 +20,15 @@ const ReaderBookCard = ({ book, onBorrow, onReserve }) => { // THÊM onReserve
     return availableCopies > 0 ? 'text-success' : 'text-danger';
   };
 
-  // ✅ Hàm tạo full URL cho ảnh
+  // ✅ SỬA: Dùng dynamic backend URL
   const getImageUrl = (imageUrl) => {
     if (!imageUrl) return null;
     if (imageUrl.startsWith('http')) return imageUrl;
-    return `http://localhost:5000${imageUrl}`;
+    
+    // Lấy base URL từ API_BASE_URL
+    const apiBaseUrl = process.env.REACT_APP_API_URL || 'http://localhost:10000/api';
+    const backendUrl = apiBaseUrl.replace('/api', '');
+    return `${backendUrl}${imageUrl}`;
   };
 
   const handleBorrowClick = () => {
@@ -33,7 +37,6 @@ const ReaderBookCard = ({ book, onBorrow, onReserve }) => { // THÊM onReserve
     }
   };
 
-  // THÊM: Hàm xử lý click đặt trước
   const handleReserveClick = () => {
     if (onReserve && book.availableCopies === 0) {
       onReserve(book);
@@ -102,7 +105,7 @@ const ReaderBookCard = ({ book, onBorrow, onReserve }) => { // THÊM onReserve
             </button>
           ) : (
             <button
-              onClick={handleReserveClick} // SỬA: Gọi onReserve từ parent
+              onClick={handleReserveClick}
               className="btn btn-warning w-100 fw-semibold text-white"
             >
               📋 Đặt trước
